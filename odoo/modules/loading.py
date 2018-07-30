@@ -380,6 +380,7 @@ def load_modules(db, force_demo=False, status=None, update_module=False):
                     loaded_modules, update_module, models_to_check)
 
         registry.loaded = True
+        update_module = True
         registry.setup_models(cr)
 
         # STEP 3.5: execute migration end-scripts
